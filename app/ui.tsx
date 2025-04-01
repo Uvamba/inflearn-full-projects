@@ -37,13 +37,13 @@ export default function UI() {
       {todosQuery.isPending && <p>Loading...</p>}
       {todosQuery.data &&
         todosQuery.data.map((todo) => <Todo key={todo.id} todo={todo} />)}
-      <button
+      <Button
         onClick={() => createTodoMutation.mutate()}
         loading={createTodoMutation.isPending}
       >
         <i className="fas fa-plus mr-2" />
         ADD TODO
-      </button>
+      </Button>
     </div>
   );
 }
